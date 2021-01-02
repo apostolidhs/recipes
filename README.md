@@ -1,2 +1,3 @@
 # recipes
-cooking recipes registry
+
+Cooking recipes registry
