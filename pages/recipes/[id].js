@@ -58,7 +58,11 @@ export default function Post({ recipe }) {
   return (
     <Layout>
       <Head>
-        <title>{recipe.title}</title>
+        <title>{recipe.title} | Gefsi</title>
+        <meta
+          content={`${recipe.subtitle} από το Gefsi`}
+          name="description"
+        ></meta>
       </Head>
       <Cover recipe={recipe} />
 
