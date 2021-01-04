@@ -4,7 +4,6 @@ import reset from "styled-reset";
 
 const GlobalStyle = createGlobalStyle`
   ${reset}
-
 `;
 
 const theme = {
@@ -12,6 +11,22 @@ const theme = {
     font: {
       // family: "Roboto Condensed",
       family: "'Noto Sans', sans-serif",
+    },
+  },
+  heading: {
+    weight: "normal",
+  },
+  carousel: {
+    animation: {
+      duration: 1000,
+    },
+    icons: {
+      color: "black",
+    },
+    disabled: {
+      icons: {
+        color: "light-1",
+      },
     },
   },
 };

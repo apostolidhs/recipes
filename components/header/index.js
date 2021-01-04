@@ -27,7 +27,7 @@ const Header = () => {
               anchor: { hover: { textDecoration: "none" } },
             }}
           >
-            <Link href="/" as="a">
+            <Link href="/">
               <Anchor color="black" ex>
                 <Heading level="1">Gefsi</Heading>
               </Anchor>

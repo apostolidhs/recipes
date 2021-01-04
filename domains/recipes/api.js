@@ -20,7 +20,6 @@ export const getRecipe = (id) => {
 
   const parsed = matter(fileContent);
   const images = getRecipeImages(id);
-  console.log("parsed", parsed, images);
 
   const { data, content } = parsed;
   const [ingredients, process] = content.split("<!-- process -->");

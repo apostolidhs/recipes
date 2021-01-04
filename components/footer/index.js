@@ -3,7 +3,7 @@ import { Box, Footer as GFooter, Heading, Text } from "grommet";
 const Footer = () => {
   return (
     <GFooter
-      pad="medium"
+      pad={{ vertical: "large" }}
       margin={{ horizontal: "medium" }}
       border={{ side: "top", color: "light-4" }}
     >
