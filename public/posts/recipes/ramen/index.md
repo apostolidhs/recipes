@@ -1,6 +1,10 @@
 ---
 title: "Ramen"
 subtitle: "Ιαπωνική σούπα με noodles"
+portions: 4
+difficult: 3
+duration: 45
+tags: chicken, japanese
 ---
 
 - 200 γρ. νουντλς ρυζιού λεπτά (4 μερίδες)
