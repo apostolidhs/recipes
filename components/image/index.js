@@ -1,3 +1,4 @@
+import { useState } from "react";
 import NextImage from "next/image";
 import styled, { keyframes } from "styled-components";
 
@@ -11,15 +12,26 @@ const shine = keyframes`
   }
 `;
 
-const Image = styled(NextImage)`
+const StyledImage = styled(NextImage)`
   background-image: linear-gradient(
     90deg,
-    #f4f4f4 0px,
+    #f2f2f2 0px,
     rgba(229, 229, 229, 0.8) 40px,
-    #f4f4f4 80px
+    #f2f2f2 80px
   );
 
   animation: ${shine} 2s infinite ease-out;
 `;
+
+const Image = (props) => {
+  const [loaded, setLoaded] = useState(false);
+  return (
+    <StyledImage
+      onLoad={() => setLoaded(true)}
+      data-loaded={loaded}
+      {...props}
+    />
+  );
+};
 
 export default Image;

@@ -1,24 +1,26 @@
-import { Box, Heading, Text } from "grommet";
+import { Heading, Text } from "grommet";
 import styled from "styled-components";
-import Image from "next/image";
 import Link from "next/link";
 import BackgroundImage from "../../components/backgroundImage";
 
 const Container = styled(BackgroundImage)`
-  img {
+  img[data-loaded="true"] {
     border-radius: 8px;
     transition: transform 0.2s ease-in-out;
-    opacity: 0.3;
+    opacity: 0.4;
   }
   &:hover {
-    img {
+    img[data-loaded="true"] {
       transform: scale(1.2);
-      opacity: 0.5;
+      opacity: 0.6;
     }
   }
 `;
 
-const contentProps = { pad: "medium" };
+const contentProps = {
+  pad: "medium",
+  background: { color: "light-1", opacity: true },
+};
 
 const Teaser = ({ recipe, ...rest }) => {
   return (
