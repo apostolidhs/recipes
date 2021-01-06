@@ -4,7 +4,7 @@ subtitle: "Κλασικό ιταλικό ριζότο"
 portions: 4
 difficult: 4
 duration: 45
-tags: rise, italian
+tags: risotto, italian
 ---
 
 - 1 κούπα ρύζι αρμπόριο ή καρναρόλι (εναλλακτικά καρολίνα)
