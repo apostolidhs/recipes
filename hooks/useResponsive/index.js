@@ -9,6 +9,7 @@ export default () => {
       isSmall: size === "small",
       isMedium: size === "medium",
       isLarge: size === "large",
+      size,
     }),
     [size]
   );

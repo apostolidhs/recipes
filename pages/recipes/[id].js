@@ -1,10 +1,20 @@
 import Head from "next/head";
 import useResponsive from "../../hooks/useResponsive";
-import { getRecipeIds, getRecipe } from "../../domains/recipes/api";
-import { Content, Cover, Carousel, Info } from "../../domains/recipes/recipe";
+import {
+  getRecipeIds,
+  getRecipe,
+  getRelatedRecipes,
+} from "../../domains/recipes/api";
+import {
+  Content,
+  Cover,
+  Carousel,
+  Info,
+  More,
+} from "../../domains/recipes/recipe";
 import Layout from "../../components/layout";
 
-export default function Post({ recipe }) {
+export default function Post({ recipe, relatedRecipes }) {
   const { isSmall } = useResponsive();
 
   return (
@@ -27,6 +37,7 @@ export default function Post({ recipe }) {
       )}
       <Content recipe={recipe} />
       <Carousel images={recipe.images} />
+      <More recipes={relatedRecipes} />
     </Layout>
   );
 }
@@ -39,11 +50,14 @@ export async function getStaticPaths() {
   };
 }
 
-export async function getStaticProps({ params }) {
-  const recipe = getRecipe(params.id);
+export async function getStaticProps({ params: { id } }) {
+  const recipe = getRecipe(id);
+  const relatedRecipes = getRelatedRecipes(id);
+
   return {
     props: {
       recipe,
+      relatedRecipes,
     },
   };
 }

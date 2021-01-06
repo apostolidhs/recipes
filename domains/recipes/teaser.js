@@ -20,6 +20,7 @@ const Container = styled(BackgroundImage)`
 const contentProps = {
   pad: "medium",
   background: { color: "light-1", opacity: true },
+  height: "100%",
 };
 
 const Teaser = ({ recipe, ...rest }) => {

@@ -30,3 +30,8 @@ export const getRecipes = () => {
   const recipeIds = getRecipeIds();
   return recipeIds.map(getRecipe);
 };
+
+export const getRelatedRecipes = (id) => {
+  const moreRecipeIds = getRecipeIds().filter((rId) => rId !== id);
+  return moreRecipeIds.map(getRecipe);
+};

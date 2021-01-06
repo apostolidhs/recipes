@@ -11,12 +11,13 @@ import Link from "next/link";
 
 const Header = () => {
   return (
-    <GHeader style={{ position: "relative" }} height="xsmall">
+    <GHeader style={{ position: "relative" }} height="xsmall" justify="center">
       <Box
         style={{ position: "absolute" }}
         pad={{ horizontal: "large", vertical: "medium" }}
         height="xsmall"
-        width="100%"
+        fill="horizontal"
+        width={{ max: "xxlarge" }}
         direction="row"
         justify="between"
         align="center"

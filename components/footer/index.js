@@ -6,8 +6,11 @@ const Footer = () => {
       pad={{ vertical: "large" }}
       margin={{ horizontal: "medium" }}
       border={{ side: "top", color: "light-4" }}
+      justify="center"
     >
-      <Heading level="3">Yannis Apostolidis</Heading>
+      <Box fill="horizontal" width={{ max: "xxlarge" }} direction="row">
+        <Heading level="3">Yannis Apostolidis</Heading>
+      </Box>
     </GFooter>
   );
 };
